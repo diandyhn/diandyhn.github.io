@@ -27,16 +27,14 @@
 </head>
 <body>
     <div id="loading-info"></div>
-
-    <!-- Import Three.js and required libraries -->
-    <script src="https://unpkg.com/three@0.157.0/build/three.min.js"></script>
-    <script src="https://unpkg.com/three@0.157.0/examples/js/controls/OrbitControls.js"></script>
-    <script src="https://unpkg.com/three@0.157.0/examples/js/loaders/MTLLoader.js"></script>
-    <script src="https://unpkg.com/three@0.157.0/examples/js/loaders/OBJLoader.js"></script>
-
-    <!-- Import our scripts -->
-    <script src="js/sceneSetup.js"></script>
-    <script src="js/modelLoader.js"></script>
-    <script src="js/main.js"></script>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.157.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.157.0/examples/jsm/"
+        }
+    }
+    </script>
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>

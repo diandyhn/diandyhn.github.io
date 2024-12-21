@@ -1,20 +1,19 @@
-// Initialize everything
+import { SceneManager } from './sceneSetup.js';
+import { ModelLoader } from './modelLoader.js';
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Create scene manager
     const sceneManager = new SceneManager();
     
-    // Create model loader
     const modelLoader = new ModelLoader(
         sceneManager.scene,
         document.getElementById('loading-info')
     );
 
-    // Load your model (replace with your model paths)
+    // Update these paths to match your file structure
     modelLoader.loadModel(
         './models/frozz.mtl',
         './models/frozz.obj'
     );
 
-    // Start animation loop
     sceneManager.animate();
 });
