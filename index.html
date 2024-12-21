@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js OBJ/MTL Viewer</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        canvas {
+            display: block;
+        }
+        #loading-info {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            color: white;
+            font-family: Arial, sans-serif;
+            z-index: 100;
+            padding: 10px;
+            background: rgba(0,0,0,0.5);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="loading-info"></div>
+
+    <!-- Import Three.js and required libraries -->
+    <script src="https://unpkg.com/three@0.157.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.157.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://unpkg.com/three@0.157.0/examples/js/loaders/MTLLoader.js"></script>
+    <script src="https://unpkg.com/three@0.157.0/examples/js/loaders/OBJLoader.js"></script>
+
+    <!-- Import our scripts -->
+    <script src="js/sceneSetup.js"></script>
+    <script src="js/modelLoader.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
